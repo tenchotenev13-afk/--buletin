@@ -722,7 +722,7 @@ function toggleTrack(){
 function renderTrackDashboard(){
   document.getElementById('track-week').textContent=STATE.week||'';
   var tasks=[];
-  (STATE.days||[]).forEach(function(day){((STATE.calendar||{})[day.date]||[]).forEach(function(e){tasks.push({day:day.date,dayName:day.name,title:e.title,col:e.col||'});});});
+  (STATE.days||[]).forEach(function(day){((STATE.calendar||{})[day.date]||[]).forEach(function(e){tasks.push({day:day.date,dayName:day.name,title:e.title,col:e.col||''});});});
   if(!tasks.length){document.getElementById('track-content').innerHTML='<div style="color:var(--muted);font-size:12px;padding:8px 0;">Няма задачи в календара.</div>';return;}
   var h='';
   tasks.forEach(function(t){
